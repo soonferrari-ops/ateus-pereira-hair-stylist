@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: #a8825a;
+  color: #f6f1ea;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a8825a #f6f1ea;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #f6f1ea;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ddd0bc;
+  border-radius: 9999px;
+}
+
+/* Visible keyboard focus, kept elegant rather than the default outline */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #a8825a;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-[1320px] px-6 md:px-10 lg:px-16;
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-widest2 text-gold font-body font-semibold;
+}
+
+.section-heading {
+  @apply font-display text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-ink;
+}
