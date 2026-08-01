@@ -1,0 +1,13 @@
+Esta pasta destina-se às imagens reais do salão.
+
+Substituir:
+- /public/images/hero/hero.jpg      → foto principal usada na secção Hero (atualmente aponta para uma imagem de demonstração do Unsplash em components/Hero.tsx)
+- /public/images/gallery/*.jpg      → fotografias reais dos trabalhos (Instagram @mateusrpereira), a referenciar em lib/constants.ts (GALLERY_ITEMS)
+- /public/images/og-cover.jpg       → imagem de partilha para redes sociais (1200x630px)
+- /public/favicon.ico               → favicon definitivo
+
+Depois de adicionar as imagens, atualizar os caminhos correspondentes em:
+- components/Hero.tsx
+- components/About.tsx
+- lib/constants.ts (GALLERY_ITEMS)
+- app/layout.tsx (metadata.icons e openGraph.images)
